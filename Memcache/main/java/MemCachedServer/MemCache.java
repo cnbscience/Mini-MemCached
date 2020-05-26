@@ -1,18 +1,8 @@
 package MemCachedServer;
 /**
- * This is the Game class (Game engine) for connect 4
- * game which provides attributes and methods pertaining
- * to connect 4 game. Driver class accesses attributes
- * and methods from this class.
- *
- * Design constraints: This class is designed to support 7*6
- * connect 4 game, currently it only supports 2 players.
- * Both players need to provide their name and color of choice
- * to start the game.
- *
  * @author  Chiddu bhat
- * @version 2.0
- * @since   May-18-2020
+ * @version 1.0
+ * @since   May-21-2020
  */
 
 

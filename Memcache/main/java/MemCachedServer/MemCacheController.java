@@ -1,5 +1,11 @@
 package MemCachedServer;
 
+/**
+ * @author  Chiddu bhat
+ * @version 1.0
+ * @since   May-21-2020
+ */
+
 import java.io.*;
 import java.net.ServerSocket;
 import java.util.Properties;

@@ -1,19 +1,19 @@
 package MemCachedServer;
+/**
+ * @author  Chiddu bhat
+ * @version 1.0
+ * @since   May-21-2020
+ */
 
 import java.util.Random;
 
 public class Util {
 
     /**
-     * This method is used to check if a player has won the game
-     * after placing a disc, this method checks 4 possible directions
-     * after every move by either players.
-     *  1) Horizontal verification (check all the rows)
-     *  2) Vertical verifaction (check all the columns)
-     *  3)Left diagonal
-     *  4)Right diagonal.
-     * @param
-     * @return true/false
+     * This method is a helper method to check if a string is
+     * a valid integer. used in validating memcached text protocol
+     * @param str
+     * @return true
      * @exception
      * @see
      */
@@ -27,15 +27,10 @@ public class Util {
     }
 
     /**
-     * This method is used to check if a player has won the game
-     * after placing a disc, this method checks 4 possible directions
-     * after every move by either players.
-     *  1) Horizontal verification (check all the rows)
-     *  2) Vertical verifaction (check all the columns)
-     *  3)Left diagonal
-     *  4)Right diagonal.
-     * @param
-     * @return true/false
+     * This method is a helper method to generate random strings of given
+     * input length, used highly in testing
+     * @param length
+     * @return String
      * @exception
      * @see
      */
