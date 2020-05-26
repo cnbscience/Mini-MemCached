@@ -8,27 +8,20 @@ package MemCachedServer;
 
 import java.io.IOException;
 import java.io.OutputStream;
-import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Scanner;
 
 public class MemCachedTask extends Thread{
     private Socket socket;
     private MemCache memCache;
-    OutputStream output;
-    PrintWriter outputStream;
+    OutputStream outputStream;
     Scanner inputStream;
 
     /**
-     * This method is used to check if a player has won the game
-     * after placing a disc, this method checks 4 possible directions
-     * after every move by either players.
-     *  1) Horizontal verification (check all the rows)
-     *  2) Vertical verifaction (check all the columns)
-     *  3)Left diagonal
-     *  4)Right diagonal.
-     * @param
-     * @return true/false
+     * This is the constructor for a worker thread. Initializes worker thread
+     * with Memcache Instance and ServerSocket.
+     * @param socket,memCache
+     * @return
      * @exception
      * @see
      */
@@ -39,15 +32,13 @@ public class MemCachedTask extends Thread{
 
 
     /**
-     * This method is used to check if a player has won the game
-     * after placing a disc, this method checks 4 possible directions
-     * after every move by either players.
-     *  1) Horizontal verification (check all the rows)
-     *  2) Vertical verifaction (check all the columns)
-     *  3)Left diagonal
-     *  4)Right diagonal.
+     * This is the run method of worker thread. Each worker thread does the following after being spawned
+     * by the controller. Sends request sent by client to  parser which validates the request itself
+     * then the dispatcher forwards it to appropriate memcached service interface. While this is beign done
+     * the worker thread holds connection with client. Once there are no more requests, worker thread closes
+     * socket, inputstream and outputstream.
      * @param
-     * @return true/false
+     * @return
      * @exception
      * @see
      */
@@ -56,14 +47,13 @@ public class MemCachedTask extends Thread{
     public void run() {
         //System.out.println("Connected: " + socket);
         try {
-            output = socket.getOutputStream();
+            outputStream = socket.getOutputStream();
             inputStream = new Scanner(socket.getInputStream());
-            outputStream = new PrintWriter(socket.getOutputStream(), true);
             ParserAndDispatcher pd = new ParserAndDispatcher();
             String input = null;
             while (inputStream.hasNextLine()) {
                 input = inputStream.nextLine();
-                pd.protocolParserAndDispatch(memCache, input, inputStream, output);
+                pd.protocolParserAndDispatch(memCache, input, inputStream, outputStream);
                 //protocolParserAndDispatcher(input);
             }
             //return;
@@ -73,7 +63,6 @@ public class MemCachedTask extends Thread{
             try {
                 socket.close();
                 inputStream.close();
-                output.close();
                 outputStream.close();
             } catch (IOException e) {
                 System.out.println("IOEXCEPTION: " + socket);
