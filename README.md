@@ -52,5 +52,5 @@ License
 Free to use
 
 Acknowledgments
-Thank you CarbonBlack for providing me an opportunity to work on a cool project. 
-it was fun filled 5 hours of work.
+Thank you Netflix for providing me an opportunity to work on a cool project. 
+
