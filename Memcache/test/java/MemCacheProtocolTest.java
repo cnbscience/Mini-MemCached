@@ -1,3 +1,19 @@
+/**
+ * This is the Test class for Memcached protocol testing.
+ * This is class performs various protocol testing including negative testing
+ *
+ *
+ * TestCases included here are :
+ * public void TestMemCacheProtocolSet()
+ * public void TestMemCacheProtocolGet()
+ * public void TestMemCacheProtocolBadRequest()
+ *
+ *
+ * @author  Chiddu bhat
+ * @version 2.0
+ * @since   May-18-2020
+ */
+
 import MemCachedServer.MemCache;
 import MemCachedServer.ParserAndDispatcher;
 import MemCachedServer.Util;

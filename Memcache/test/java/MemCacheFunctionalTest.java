@@ -1,3 +1,23 @@
+/**
+ * This is the Test class for Memcached functionality testing.
+ * This is class performs various functionality testing of the
+ * Memcached core services.
+ *
+ *
+ * TestCases included here are :
+ * public void TestMemCachePutRequest()
+ * public void TestMemCacheWrongKeyGetRequest()
+ * public void LRUEvictionTest()
+ * public void MemCacheCapacityTest()
+ * public void MemCacheCapacityTest()
+ *
+ *
+ * @author  Chiddu bhat
+ * @version 2.0
+ * @since   May-18-2020
+ */
+
+
 import MemCachedServer.MemCache;
 import MemCachedServer.Node;
 import MemCachedServer.MemCacheController;
@@ -94,7 +114,7 @@ public class MemCacheFunctionalTest {
         Assert.assertEquals(value, m.getValue(key));
 
         System.out.println("****************Score**********************");
-        System.out.println("MemCached Eviction test complete case successfully passed");
+        System.out.println("MemCached capacity test complete case successfully passed");
         System.out.println("*******************************************");
     }
 
