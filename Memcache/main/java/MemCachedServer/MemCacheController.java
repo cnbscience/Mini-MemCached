@@ -93,7 +93,7 @@ public class MemCacheController {
         try {
             //FileInputStream fileInputStream = new FileInputStream("Configuration.properties");
 
-            InputStream input = getClass().getClassLoader().getResourceAsStream("/resources/config/Configuration.properties");
+            InputStream input = getClass().getClassLoader().getResourceAsStream("config/Configuration.properties");
             config = new Properties();
             config.load(input);
             port = Integer.parseInt(config.getProperty("port"));
