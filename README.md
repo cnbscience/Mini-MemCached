@@ -3,8 +3,6 @@ generic in nature, but intended for use in speeding up dynamic web applications 
 alleviating database load. Memcached is an in-memory key-value store for small chunks of arbitrary 
 data (strings, objects) from results of database calls, API calls, or page rendering.
 
-More info : https://memcached.org/
-
 High Level Overview:
 The Mini-memcached server is comprised of three main components :
 -Controller
@@ -27,6 +25,7 @@ Cache service : This is the core module of the server, responsible for serving r
 Internally it uses LRU caching policy to keep the cache updated. It’s capacity is initialized during the server 
 configuration by the Controller.
 
+More info : https://memcached.org/
 
 Getting Started:
 Download IntelliJ IDEA or eclipse based on the underlying OS, make sure you have
@@ -61,24 +60,27 @@ To deploy Using IDE like IntelliJ:
 2. Import the project into IntelliJ IDEA and run build and run MemcachedServerDriver.
   
 
-until finished
+Until finished
+
 The server will keep responding until the client closes it's session. To close the server, 
 just stop the server.
 
-Running unit tests
-In the test folder there are two types of tests 
-Memcached core functionality test - which validates and verifies core functionality like set,get and cache eviction mechanisms.
-Memcached protocol test: which verifies the protocol validation module of this project. 
-To run the tests, have you Junit configure with your class path. 
+
+Running unit tests:
+In the test folder there are two types of tests
+1. Memcached core functionality test - which validates and verifies core functionality like set,get and cache eviction         mechanisms.
+2. Memcached protocol test: which verifies the protocol validation module of this project.
+To run the tests, have you Junit configure with your class path.
 
 Running performance benchmarking using memtier_benchmark 
-1)Download and install memtier_benchmark as per the instructions mentioned in the README.
-2)Start the memcached server either through the command line or IDE as mentioned above.
-3)Use various tuning parameters to check the performance of this memcached.
-4)Here is one such performance benchmark which was captured.
+
+1. Download and install memtier_benchmark as per the instructions mentioned in the README.
+2. Start the memcached server either through the command line or IDE as mentioned above.
+3. Use various tuning parameters to check the performance of this memcached.
+4. Here is one such performance benchmark which was captured.
 
 Built With
-Maven - Dependency Management
+ItelliJ IDEA 
 
 Versioning
 Connect four - version 2.0
