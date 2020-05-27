@@ -41,23 +41,24 @@ Prerequisites:
 -Git installed.
 
 Installing and running 
+
 To deploy using command line and git.
-    1. Make a directory : “mkdir memcached”
-    2. type “cd memcached”
-    3. git clone https://github.com/cnbscience/Mini-MemCached.git
-    4. cd /path/to/Mini-MemCached/Memcache/main/java/MemCachedServer
-    5. Java -classpath /path/to/memcached/Mini-MemCached/target/classes/MemCachedServer
-    MemCachedServer.MemcachedServerDriver
-    6. If the server is up you will see this message.
-        *************Memcached Server started************** 
-                Waiting for clients to connect
-    7. Open one more terminal and type:
-    a. “telnet localhost <port_no>” (defualt pot_no is 11211).
-    8. Start sending memcached text protocol requests.
+
+1. Make a directory : “mkdir memcached”
+2. type “cd memcached”
+3. git clone https://github.com/cnbscience/Mini-MemCached.git
+4. cd /path/to/Mini-MemCached/Memcache/main/java/MemCachedServer
+5. Java -classpath /path/to/memcached/Mini-MemCached/target/classes/MemCachedServer/MemCachedServer.MemcachedServerDriver
+6. If the server is up you will see this message.
+*************Memcached Server started************** 
+      Waiting for clients to connect
+7. Open one more terminal and type:
+   a. “telnet localhost <port_no>” (defualt pot_no is 11211).
+8. Start sending memcached text protocol requests.
 
 To deploy Using IDE like IntelliJ:
-    1. Download the project from https://github.com/cnbscience/Mini-MemCached​.
-    2. Import the project into IntelliJ IDEA and run build and run MemcachedServerDriver.
+1. Download the project from https://github.com/cnbscience/Mini-MemCached.
+2. Import the project into IntelliJ IDEA and run build and run MemcachedServerDriver.
   
 
 until finished
@@ -67,15 +68,15 @@ just stop the server.
 Running unit tests
 In the test folder there are two types of tests 
 Memcached core functionality test - which validates and verifies core functionality like
-set , get and cache eviction mechanisms.
+set,get and cache eviction mechanisms.
 Memcached protocol test: which verifies the protocol validation module of this project.
 To run the tests, have you Junit configure with your class path. 
 
 Running performance benchmarking using memtier_benchmark
-    - Download and install memtier_benchmark as per the instructions mentioned in the README.
-    - Start the memcached server either through the command line or IDE as mentioned above.
-    - Use various tuning parameters to check the performance of this memcached.
-    - Here is one such performance benchmark which was captured.
+1)Download and install memtier_benchmark as per the instructions mentioned in the README.
+2)Start the memcached server either through the command line or IDE as mentioned above.
+3)Use various tuning parameters to check the performance of this memcached.
+4)Here is one such performance benchmark which was captured.
 
 Built With
 Maven - Dependency Management
