@@ -91,9 +91,11 @@ public class MemCacheController {
      */
     private void loadMemCacheConfigurations(){
         try {
-            FileInputStream fileInputStream = new FileInputStream("Configuration.properties");
+            //FileInputStream fileInputStream = new FileInputStream("Configuration.properties");
+
+            InputStream input = getClass().getClassLoader().getResourceAsStream("/resources/config/Configuration.properties");
             config = new Properties();
-            config.load(fileInputStream);
+            config.load(input);
             port = Integer.parseInt(config.getProperty("port"));
             capacity = Integer.parseInt(config.getProperty("capacity"));
         } catch (IOException e) {
