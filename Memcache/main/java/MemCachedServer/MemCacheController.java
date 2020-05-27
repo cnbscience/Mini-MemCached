@@ -26,7 +26,7 @@ public class MemCacheController {
 
     /**
      * This method is responsible for creating server socket based on the
-     * port that is configured in Configuratios.properties file , it also intializes the
+     * port that is configured in Configuratios.properties file , it also initializes the
      * memcached to capacity specified in config file.
      * It is responsible for hosting executor service, which is a neat way of managing threads
      * java.

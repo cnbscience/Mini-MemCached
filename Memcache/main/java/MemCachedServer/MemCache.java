@@ -18,7 +18,7 @@ import java.util.HashMap;
  * recently used. Least recently used elements will be at the end of
  * the list. When we hit MAX_CAPACITY we will start removing elements from the
  * tail of the list which represents LRC cache eviction policy. Since adding and removing
- * elements from Doubly linked list also.
+ * elements from Doubly linked tail is also constant time.
  *
  */
 

@@ -115,7 +115,6 @@ public class ParserAndDispatcher {
      * only supports get and set requests as of now. The key length is restricted to 150.
      * This also checks if length of set request is 5 along with numeric validity for
      * flags, ttl and bytes parameters.
-     * We do not
      *
      * @param request
      * @return true/false
