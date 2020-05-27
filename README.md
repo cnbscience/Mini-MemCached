@@ -7,23 +7,23 @@ More info : https://memcached.org/
 
 High Level Overview:
 The Mini-memcached server is comprised of three main components :
-● Controller
-● Protocol parser and Dispatcher
-● MemCache service.
+-Controller
+-Protocol parser and Dispatcher
+-MemCache service.
 
-Controller: ​The controller is responsible for all the configurations of the memcache server. 
+Controller: The controller is responsible for all the configurations of the memcache server. 
 It is also responsible for maintaining dynamic thread pool to throttle cache performance based on the external demand.
 
-Protocol parser: ​ This module is responsible for parsing the incoming request from the client. 
+Protocol parser: This module is responsible for parsing the incoming request from the client. 
 It is responsible for verifying if the incoming request adheres to memcached text protocol. 
 It also checks the parameters of the request for their validity. 
 It responds to clients following standards of memcached text protocol.
 
-Dispatcher: ​Once the request is parsed by the protocol parser and verified. The dispatcher forwards the request to 
+Dispatcher: Once the request is parsed by the protocol parser and verified. The dispatcher forwards the request to 
 the concerned service provider(SET or GET). once the service is completed, results are sent back to clients using 
 standard memcached text protocol.
 
-Cache service : ​This is the core module of the server, responsible for serving requests sent from the dispatcher. 
+Cache service : This is the core module of the server, responsible for serving requests sent from the dispatcher. 
 Internally it uses LRU caching policy to keep the cache updated. It’s capacity is initialized during the server 
 configuration by the Controller.
 
@@ -35,9 +35,10 @@ Install telnet if you don't have one.
 Install JUnit and configure it's class path.
 
 Prerequisites:
-● This project is built with IntelliJ Idea IDE with openJDK14.
-● Also have Junit installed in your class path to run the test cases. ● Telnet
-● Git installed.
+-This project is built with IntelliJ Idea IDE with openJDK14.
+-Also have Junit installed in your class path to run the test cases.
+-Telnet
+-Git installed.
 
 Installing and running 
 To deploy using command line and git.
@@ -71,10 +72,10 @@ Memcached protocol test: which verifies the protocol validation module of this p
 To run the tests, have you Junit configure with your class path. 
 
 Running performance benchmarking using memtier_benchmark
-    ● Download and install memtier_benchmark as per the instructions mentioned in the README.
-    ● Start the memcached server either through the command line or IDE as mentioned above.
-    ● Use various tuning parameters to check the performance of this memcached.
-    ● Here is one such performance benchmark which was captured.
+    - Download and install memtier_benchmark as per the instructions mentioned in the README.
+    - Start the memcached server either through the command line or IDE as mentioned above.
+    - Use various tuning parameters to check the performance of this memcached.
+    - Here is one such performance benchmark which was captured.
 
 Built With
 Maven - Dependency Management
