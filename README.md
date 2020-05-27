@@ -88,6 +88,4 @@ Chiddu Bhat
 License
 Free to use
 
-Acknowledgments
-Thank you Netflix for providing me an opportunity to work on a cool project. 
 
