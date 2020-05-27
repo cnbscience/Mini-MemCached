@@ -47,13 +47,14 @@ To deploy using command line and git.
 2. type “cd memcached”
 3. git clone https://github.com/cnbscience/Mini-MemCached.git
 4. cd /path/to/Mini-MemCached/Memcache/main/java/MemCachedServer
-5. Java -classpath /path/to/memcached/Mini-MemCached/target/classes/MemCachedServer/MemCachedServer.MemcachedServerDriver
-6. If the server is up you will see this message.
+5. javac -d /Users/chiddubhat/Documents/MemcacheD/target/classes/ *.java (Not compulsory if the class files are present)
+6. java -classpath /path/to/memcached/MemcacheD/target/classes/ MemCachedServer.MemcachedServerDriver
+7. If the server is up you will see this message.
 *************Memcached Server started************** 
       Waiting for clients to connect
-7. Open one more terminal and type:
+8. Open one more terminal and type:
    a. “telnet localhost <port_no>” (defualt pot_no is 11211).
-8. Start sending memcached text protocol requests.
+9. Start sending memcached text protocol requests.
 
 To deploy Using IDE like IntelliJ:
 1. Download the project from https://github.com/cnbscience/Mini-MemCached.
