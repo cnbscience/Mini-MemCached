@@ -67,12 +67,11 @@ just stop the server.
 
 Running unit tests
 In the test folder there are two types of tests 
-Memcached core functionality test - which validates and verifies core functionality like
-set,get and cache eviction mechanisms.
-Memcached protocol test: which verifies the protocol validation module of this project.
+Memcached core functionality test - which validates and verifies core functionality like set,get and cache eviction mechanisms.
+Memcached protocol test: which verifies the protocol validation module of this project. 
 To run the tests, have you Junit configure with your class path. 
 
-Running performance benchmarking using memtier_benchmark
+Running performance benchmarking using memtier_benchmark 
 1)Download and install memtier_benchmark as per the instructions mentioned in the README.
 2)Start the memcached server either through the command line or IDE as mentioned above.
 3)Use various tuning parameters to check the performance of this memcached.
