@@ -84,7 +84,7 @@ Built With
 ItelliJ IDEA 
 
 Versioning
-Connect four - version 2.0
+Mini-Memcached- version 1.0
 
 Authors
 Chiddu Bhat
