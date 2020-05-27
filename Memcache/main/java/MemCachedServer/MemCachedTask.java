@@ -4,6 +4,10 @@ package MemCachedServer;
  * @author  Chiddu bhat
  * @version 1.0
  * @since   May-21-2020
+ *
+ * This is the worker thread class and has following methods
+ * public MemCachedTask(Socket socket, MemCache memCache)
+ *  public void run()
  */
 
 import java.io.IOException;

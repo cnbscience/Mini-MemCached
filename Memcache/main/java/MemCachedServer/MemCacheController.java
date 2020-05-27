@@ -4,6 +4,11 @@ package MemCachedServer;
  * @author  Chiddu bhat
  * @version 1.0
  * @since   May-21-2020
+ *
+ * This is the controller class which supports following methods
+ * public void controller ()
+ * private void loadMemCacheConfigurations()
+ *
  */
 
 import java.io.*;

@@ -3,6 +3,12 @@ package MemCachedServer;
  * @author  Chiddu bhat
  * @version 1.0
  * @since   May-21-2020
+ *
+ * This is the node class which hold key, value and metadata.
+ * There are the methods provided by this class
+ * getter and setters of all attributes
+ * public Node(K key, V val, int flags, int ttl, int bytes)
+ *
  */
 
 public class Node<K,V>{

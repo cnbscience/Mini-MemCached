@@ -3,6 +3,11 @@ package MemCachedServer;
  * @author  Chiddu bhat
  * @version 1.0
  * @since   May-21-2020
+ *
+ * This is the utility class and supports following methods
+ *  public static boolean isNumeric(String str)
+ *  public static String getRandomString(int length)
+ *
  */
 
 import java.util.Random;

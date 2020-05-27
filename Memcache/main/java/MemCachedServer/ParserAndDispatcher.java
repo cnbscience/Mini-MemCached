@@ -4,6 +4,18 @@ package MemCachedServer;
  * @author  Chiddu bhat
  * @version 1.0
  * @since   May-21-2020
+ *
+ * This class provides protocol parsing and dispatching them to
+ * concerned interfaces. It supports following methods
+ * public void protocolParserAndDispatch(MemCache memCache, String request,
+ *                                           Scanner inputStream, OutputStream output)
+ * private static void sendToClient(String s, OutputStream outputStream)
+ * private static void sendToClient(String s, OutputStream outputStream)
+ * private static void performGetOperation(MemCache memCache, Object key,
+ *                                            OutputStream outputStream)
+ * public boolean validateRequestProtocol(String request)
+ * public static void performSetOperation(MemCache memCache, String[] token,
+ *                                            Scanner inputStream, OutputStream outputStream)
  */
 
 import java.io.IOException;

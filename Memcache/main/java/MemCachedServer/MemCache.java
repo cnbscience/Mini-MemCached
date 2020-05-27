@@ -3,6 +3,15 @@ package MemCachedServer;
  * @author  Chiddu bhat
  * @version 1.0
  * @since   May-21-2020
+ *
+ * This is the core memcache service class and has following methods
+ * public MemCache(int capacity)
+ * public V getValue(K key)
+ * private synchronized void add(Node node)
+ * private synchronized void remove(Node node)
+ * public  synchronized Node get(K key)
+ * public synchronized void put(K key, V value, int flags ,int ttl, int bytes)
+ *
  */
 
 
