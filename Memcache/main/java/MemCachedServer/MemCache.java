@@ -16,6 +16,7 @@ package MemCachedServer;
 
 
 import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * High Level Design:
@@ -37,7 +38,7 @@ public class MemCache<K,V>{
     Node LRUhead;
     Node LRUtail;
 
-    HashMap<K,Node> memcached;
+    ConcurrentHashMap<K,Node> memcached;
 
 
     /**
@@ -50,7 +51,7 @@ public class MemCache<K,V>{
      */
 
     public MemCache(int capacity) {
-        memcached = new HashMap<>(capacity);
+        memcached = new ConcurrentHashMap<>(capacity);
         this.capacity = capacity;
         LRUhead = new Node();
         LRUtail = new Node();
@@ -88,7 +89,7 @@ public class MemCache<K,V>{
      * @exception
      * @see
      */
-     private synchronized void add(Node node){
+     private synchronized  void add(Node node){
         Node first = LRUhead.getNext();
         LRUhead.setNext(node);
         node.setNext(first);
@@ -139,7 +140,7 @@ public class MemCache<K,V>{
      * @exception
      * @see
      */
-    public  synchronized Node get(K key) {
+    public Node get(K key) {
         if(!memcached.containsKey(key)){
             return null;
         }else{
@@ -171,7 +172,7 @@ public class MemCache<K,V>{
      * @exception
      * @see
      */
-    public synchronized void put(K key, V value, int flags ,int ttl, int bytes) {
+    public void put(K key, V value, int flags ,int ttl, int bytes) {
         //System.out.println("IN PUT MEMCACHE with value "+ value);
         if(memcached.containsKey(key)) {
             Node node = memcached.get(key);
@@ -185,7 +186,7 @@ public class MemCache<K,V>{
             }
             //System.out.println("BEFORE RETURN FROM LEVEL1");
             return;
-        }
+        } 
         if(this.capacity== memcached.size()){
             //System.out.println("CAPACITY FULL, DOING EVICTION NOW");
             Node n = new Node(key, value, flags, ttl, bytes);
