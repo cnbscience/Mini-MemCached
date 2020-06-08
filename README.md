@@ -1,45 +1,45 @@
-Mini-MemCached:
+**Mini-MemCached:**
 generic in nature, but intended for use in speeding up dynamic web applications by 
 alleviating database load. Memcached is an in-memory key-value store for small chunks of arbitrary 
 data (strings, objects) from results of database calls, API calls, or page rendering.
 
-High Level Overview:
+**High Level Overview:**
 The Mini-memcached server is comprised of three main components :
 -Controller
 -Protocol parser and Dispatcher
 -MemCache service.
 
-Controller: The controller is responsible for all the configurations of the memcache server. 
+**Controller:** The controller is responsible for all the configurations of the memcache server. 
 It is also responsible for maintaining dynamic thread pool to throttle cache performance based on the external demand.
 
-Protocol parser: This module is responsible for parsing the incoming request from the client. 
+**Protocol parser:** This module is responsible for parsing the incoming request from the client. 
 It is responsible for verifying if the incoming request adheres to memcached text protocol. 
 It also checks the parameters of the request for their validity. 
 It responds to clients following standards of memcached text protocol.
 
-Dispatcher: Once the request is parsed by the protocol parser and verified. The dispatcher forwards the request to 
+**Dispatcher:** Once the request is parsed by the protocol parser and verified. The dispatcher forwards the request to 
 the concerned service provider(SET or GET). once the service is completed, results are sent back to clients using 
 standard memcached text protocol.
 
-Cache service : This is the core module of the server, responsible for serving requests sent from the dispatcher. 
+**Cache service:** This is the core module of the server, responsible for serving requests sent from the dispatcher. 
 Internally it uses LRU caching policy to keep the cache updated. It’s capacity is initialized during the server 
 configuration by the Controller.
 
 More info : https://memcached.org/
 
-Getting Started:
-Download IntelliJ IDEA or eclipse based on the underlying OS, make sure you have
-open JDK-14 installed. 
-Install telnet if you don't have one.
-Install JUnit and configure it's class path.
+**Getting Started:**
+1. Download IntelliJ IDEA or eclipse based on the underlying OS, make sure you have
+2. open JDK-14 installed. 
+3. Install telnet if you don't have one.
+4. Install JUnit and configure it's class path.
 
-Prerequisites:
--This project is built with IntelliJ Idea IDE with openJDK14.
--Also have Junit installed in your class path to run the test cases.
--Telnet
--Git installed.
+**Prerequisites:**
+1. This project is built with IntelliJ Idea IDE with openJDK14.
+2. Also have Junit installed in your class path to run the test cases.
+3. Telnet
+4. Git installed.
 
-Installing and running 
+**Installing and running**
 
 To deploy using command line and git.
 
@@ -47,7 +47,7 @@ To deploy using command line and git.
 2. type “cd memcached”
 3. git clone https://github.com/cnbscience/Mini-MemCached.git
 4. cd /path/to/Mini-MemCached/Memcache/main/java/MemCachedServer
-5. javac -d /Users/chiddubhat/Documents/MemcacheD/target/classes/ *.java (Not compulsory if the class files are present)
+5. javac -d /path/to/MemcacheD/target/classes/ *.java (Not compulsory if the class files are present)
 6. java -classpath /path/to/memcached/MemcacheD/target/classes/ MemCachedServer.MemcachedServerDriver
 7. If the server is up you will see this message.
 *************Memcached Server started************** 
@@ -61,19 +61,19 @@ To deploy Using IDE like IntelliJ:
 2. Import the project into IntelliJ IDEA and run build and run MemcachedServerDriver.
   
 
-Until finished
+**Until finished**
 
 The server will keep responding until the client closes it's session. To close the server, 
 just stop the server.
 
 
-Running unit tests:
+**Running unit tests:**
 In the test folder there are two types of tests
 1. Memcached core functionality test - which validates and verifies core functionality like set,get and cache eviction         mechanisms.
 2. Memcached protocol test: which verifies the protocol validation module of this project.
 To run the tests, have you Junit configure with your class path.
 
-Running performance benchmarking using memtier_benchmark 
+**Running performance benchmarking using memtier_benchmark** 
 
 1. Download and install memtier_benchmark as per the instructions mentioned in the README.
 2. Start the memcached server either through the command line or IDE as mentioned above.
@@ -86,10 +86,10 @@ ItelliJ IDEA
 Versioning
 Mini-Memcached- version 1.0
 
-Authors
-Chiddu Bhat
+**Authors
+Chiddu Bhat**
 
-License
-Free to use
+**License
+Free to use**
 
 
